@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Note {
@@ -23,4 +24,9 @@ public class Note {
         return creationDate;
     }
 
+    @Override
+    public String toString() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return "Name: " + name + ", Date: " + sdf.format(creationDate);
+    }
 }
